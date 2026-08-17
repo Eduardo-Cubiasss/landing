@@ -184,7 +184,6 @@ function Index() {
                 Ver cómo funciona
               </a>
             </div>
-            </div>
           </div>
           <div className="relative">
             <div className="animate-float surface-3d overflow-hidden rounded-[2.5rem]">
