@@ -10,7 +10,7 @@ import {
   X,
 } from "lucide-react";
 
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo-transparent.png";
 import hero3d from "@/assets/hero-3d.jpg";
 import chat3d from "@/assets/chat-3d.jpg";
 import metrics3d from "@/assets/metrics-3d.jpg";
@@ -128,7 +128,7 @@ function Index() {
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <a href="#top" className="flex items-center gap-3">
-            <img src={logo.url} alt="Logo de Mail AI" width={36} height={36} className="h-9 w-9" />
+            <img src={logo} alt="Logo de Mail AI" width={36} height={36} className="h-9 w-9" />
             <span className="font-brand text-3xl leading-none text-primary">Mail AI</span>
           </a>
           <div className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
@@ -368,7 +368,7 @@ function Index() {
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-10 sm:flex-row">
           <div className="flex items-center gap-3">
-            <img src={logo.url} alt="Logo de Mail AI" width={28} height={28} className="h-7 w-7" />
+            <img src={logo} alt="Logo de Mail AI" width={28} height={28} className="h-7 w-7" />
             <span className="font-brand text-2xl text-primary">Mail AI</span>
           </div>
           <p className="text-xs text-muted-foreground">
