@@ -128,7 +128,7 @@ function Index() {
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <a href="#top" className="flex items-center gap-3">
-            <span className="rounded-2xl bg-card p-1.5 ring-1 ring-primary/20">
+            <span className="rounded-2xl bg-primary/15 p-1.5 ring-1 ring-primary/30">
               <img src={logo.url} alt="Logo de Mail AI" width={32} height={32} className="h-8 w-8" />
             </span>
             <span className="font-brand text-3xl leading-none text-primary">Mail AI</span>
@@ -370,7 +370,7 @@ function Index() {
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-10 sm:flex-row">
           <div className="flex items-center gap-3">
-            <span className="rounded-xl bg-card p-1 ring-1 ring-primary/20">
+            <span className="rounded-xl bg-primary/15 p-1 ring-1 ring-primary/30">
               <img src={logo.url} alt="Logo de Mail AI" width={24} height={24} className="h-6 w-6" />
             </span>
             <span className="font-brand text-2xl text-primary">Mail AI</span>
