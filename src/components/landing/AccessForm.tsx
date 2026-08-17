@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { Send, Loader2, CheckCircle2 } from "lucide-react";
+import { submitAccessRequest } from "@/lib/mail";
 
 export function AccessForm() {
   const [email, setEmail] = useState("");
@@ -15,10 +16,18 @@ export function AccessForm() {
       return;
     }
     setSending(true);
-    await new Promise((r) => setTimeout(r, 900));
-    setSending(false);
-    setSent(true);
-    toast.success("Solicitud enviada. Te contactaremos muy pronto.");
+    try {
+      await submitAccessRequest({ data: { email, company } });
+      setSent(true);
+      toast.success("¡Solicitud enviada! Correo despachado exitosamente.");
+    } catch (err: any) {
+      console.error("Error al enviar solicitud:", err);
+      toast.error(
+        err?.message || "Error al enviar la solicitud. Revisa la consola o intenta de nuevo.",
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   if (sent) {

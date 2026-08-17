@@ -153,24 +153,24 @@ function Index() {
 
       {/* Hero */}
       <section id="top" className="grid-olive relative">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-2 md:py-28">
-          <div>
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:py-28">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-1.5 text-xs font-medium tracking-wide text-primary uppercase">
               Beta privada · 15 empresas piloto
             </span>
-            <h1 className="mt-6 text-5xl leading-[1.05] font-extrabold tracking-tight md:text-6xl">
-              Habla con la IA.
+            <h1 className="mt-6 text-4xl sm:text-5xl leading-[1.05] font-extrabold tracking-tight lg:text-6xl">
+              Pierdes tiempo y dinero.
               <br />
-              <span className="text-gradient-gold font-brand text-6xl md:text-7xl">
-                Ella envía tu campaña.
+              <span className="text-gradient-gold font-brand text-5xl sm:text-6xl lg:text-7xl">
+                haciendo campañas de correos.
               </span>
             </h1>
-            <p className="mt-6 max-w-lg text-lg text-muted-foreground">
+            <p className="mt-6 max-w-lg text-base sm:text-lg text-muted-foreground">
               Mail AI elimina el cuello de botella entre marketing y desarrollo: describe tu
               objetivo en un chat y obtén plantillas HTML de alto impacto, listas para despachar con
               entregabilidad certificada.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
               <a
                 href="#acceso"
                 className="glow-primary rounded-2xl bg-primary px-7 py-4 font-semibold text-primary-foreground transition hover:brightness-105"
@@ -185,7 +185,7 @@ function Index() {
               </a>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div className="animate-float surface-3d overflow-hidden rounded-[2.5rem]">
               <img
                 src={hero3d}
@@ -201,37 +201,39 @@ function Index() {
 
       {/* Problema / Solución */}
       <section id="solucion" className="mx-auto max-w-6xl px-5 py-20">
-        <p className="font-brand text-4xl text-primary">El problema y la solución</p>
-        <h2 className="mt-2 max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
-          Marketing no debería esperar a ingeniería para lanzar una campaña
-        </h2>
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <p className="font-brand text-4xl text-primary">El problema y la solución</p>
+          <h2 className="mt-2 max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
+            Marketing no debería esperar a ingeniería para lanzar una campaña
+          </h2>
+        </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <div className="surface-3d tilt-card rounded-3xl p-8">
+          <div className="surface-3d tilt-card flex flex-col items-center rounded-3xl p-8 text-center sm:items-start sm:text-left">
             <h3 className="text-xl font-semibold">Hoy: dependencia técnica</h3>
-            <ul className="mt-6 space-y-4 text-sm text-muted-foreground">
+            <ul className="mt-6 space-y-4 text-sm text-muted-foreground w-full">
               {[
                 "Iteraciones de días entre marketing e ingeniería.",
                 "Sin acceso directo para ajustar textos, imágenes o formatos.",
                 "Riesgo de spam por certificados y estándares mal configurados.",
               ].map((t) => (
-                <li key={t} className="flex gap-3">
+                <li key={t} className="flex items-start gap-3 text-left">
                   <X className="mt-0.5 h-4 w-4 shrink-0 text-destructive" />
-                  {t}
+                  <span>{t}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="surface-3d tilt-card rounded-3xl border-primary/30 p-8">
+          <div className="surface-3d tilt-card flex flex-col items-center rounded-3xl border-primary/30 p-8 text-center sm:items-start sm:text-left">
             <h3 className="text-xl font-semibold text-primary">Con Mail AI: segundos</h3>
-            <ul className="mt-6 space-y-4 text-sm text-muted-foreground">
+            <ul className="mt-6 space-y-4 text-sm text-muted-foreground w-full">
               {[
                 "Abstracción conversacional: describes y la IA diseña.",
                 "Envíos certificados anti-spam con SPF, DKIM y DMARC.",
                 "Plataforma desacoplada que protege tus sistemas centrales.",
               ].map((t) => (
-                <li key={t} className="flex gap-3">
+                <li key={t} className="flex items-start gap-3 text-left">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                  {t}
+                  <span>{t}</span>
                 </li>
               ))}
             </ul>
@@ -240,7 +242,10 @@ function Index() {
 
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           {pilares.map((p) => (
-            <article key={p.title} className="surface-3d tilt-card rounded-3xl p-7">
+            <article
+              key={p.title}
+              className="surface-3d tilt-card flex flex-col items-center rounded-3xl p-7 text-center lg:items-start lg:text-left"
+            >
               <div className="glow-primary flex h-12 w-12 items-center justify-center rounded-2xl bg-primary">
                 <p.icon className="h-6 w-6 text-primary-foreground" />
               </div>
@@ -254,8 +259,8 @@ function Index() {
       {/* Plataforma */}
       <section id="plataforma" className="grid-olive border-y border-border/60">
         <div className="mx-auto max-w-6xl px-5 py-20">
-          <div className="grid items-center gap-12 md:grid-cols-2">
-            <div className="animate-float surface-3d overflow-hidden rounded-[2.5rem]">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div className="animate-float surface-3d mx-auto w-full max-w-md overflow-hidden rounded-[2.5rem] lg:max-w-none">
               <img
                 src={chat3d}
                 alt="Burbujas de chat 3D representando la IA de Mail AI"
@@ -265,14 +270,17 @@ function Index() {
                 className="w-full"
               />
             </div>
-            <div>
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <p className="font-brand text-4xl text-primary">La plataforma</p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
                 Todo lo que necesitas para crear, enviar y medir
               </h2>
-              <div className="mt-8 grid gap-5 sm:grid-cols-2">
+              <div className="mt-8 grid w-full gap-5 sm:grid-cols-2">
                 {capacidades.map((c) => (
-                  <div key={c.title} className="surface-3d rounded-2xl p-5">
+                  <div
+                    key={c.title}
+                    className="surface-3d flex flex-col items-center rounded-2xl p-5 text-center lg:items-start lg:text-left"
+                  >
                     <c.icon className="h-5 w-5 text-primary" />
                     <h3 className="mt-3 font-semibold">{c.title}</h3>
                     <p className="mt-1.5 text-sm text-muted-foreground">{c.text}</p>
@@ -282,18 +290,18 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-16 grid items-center gap-12 md:grid-cols-2">
-            <div className="order-2 md:order-1">
+          <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
+            <div className="order-2 flex flex-col items-center text-center lg:order-1 lg:items-start lg:text-left">
               <p className="font-brand text-4xl text-primary">Telemetría</p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
                 Métricas claras, decisiones rápidas
               </h2>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mt-4 max-w-lg text-muted-foreground">
                 Aperturas, clics, rebotes, mapa de calor y exportación de reportes. Cada campaña
                 queda registrada en un historial auditable que puedes duplicar en un clic.
               </p>
             </div>
-            <div className="animate-float surface-3d order-1 overflow-hidden rounded-[2.5rem] md:order-2">
+            <div className="animate-float surface-3d order-1 mx-auto w-full max-w-md overflow-hidden rounded-[2.5rem] lg:order-2 lg:max-w-none">
               <img
                 src={metrics3d}
                 alt="Paneles y gráficas 3D del dashboard de Mail AI"
@@ -308,16 +316,16 @@ function Index() {
       </section>
 
       {/* Planes */}
-      <section id="planes" className="mx-auto max-w-6xl px-5 py-20">
+      <section id="planes" className="mx-auto max-w-6xl px-5 py-20 text-center">
         <p className="font-brand text-4xl text-primary">Planes</p>
-        <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+        <h2 className="mx-auto mt-2 max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
           Precios competitivos, margen blindado
         </h2>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {planes.map((p) => (
             <article
               key={p.name}
-              className={`surface-3d flex flex-col rounded-3xl p-7 ${
+              className={`surface-3d flex flex-col items-center rounded-3xl p-7 text-center ${
                 p.featured ? "glow-primary border-primary/50" : ""
               }`}
             >
@@ -325,17 +333,17 @@ function Index() {
               <h3 className="mt-3 text-xl font-semibold">{p.name}</h3>
               <p className="mt-4 text-4xl font-extrabold">{p.price}</p>
               <p className="text-xs text-muted-foreground">{p.note}</p>
-              <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
+              <ul className="mt-6 w-full space-y-3 text-sm text-muted-foreground">
                 {p.items.map((i) => (
-                  <li key={i} className="flex gap-2">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    {i}
+                  <li key={i} className="flex items-center justify-center gap-2">
+                    <Check className="h-4 w-4 shrink-0 text-primary" />
+                    <span>{i}</span>
                   </li>
                 ))}
               </ul>
               <a
                 href="#acceso"
-                className={`mt-8 rounded-2xl px-5 py-3 text-center text-sm font-semibold transition ${
+                className={`mt-8 w-full rounded-2xl px-5 py-3 text-center text-sm font-semibold transition ${
                   p.featured
                     ? "bg-primary text-primary-foreground hover:brightness-105"
                     : "border border-border hover:border-primary/60 hover:text-primary"
@@ -350,23 +358,23 @@ function Index() {
 
       {/* Acceso */}
       <section id="acceso" className="grid-olive border-t border-border/60">
-        <div className="mx-auto max-w-3xl px-5 py-24 text-center">
+        <div className="mx-auto flex max-w-3xl flex-col items-center px-5 py-24 text-center">
           <p className="font-brand text-5xl text-primary">Pedir acceso</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
             Deja el Gmail de tu empresa y te abrimos la beta
           </h2>
-          <p className="mt-4 text-muted-foreground">
+          <p className="mt-4 max-w-xl text-muted-foreground">
             Estamos incorporando 15 empresas piloto. Te enviamos el acceso y acompañamos tu primera
             campaña generada por IA.
           </p>
-          <div className="mt-10 text-left">
+          <div className="mt-10 w-full">
             <AccessForm />
           </div>
         </div>
       </section>
 
       <footer className="border-t border-border/60">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-10 sm:flex-row">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-10 text-center md:flex-row md:text-left">
           <div className="flex items-center gap-3">
             <img src={logo} alt="Logo de Mail AI" width={28} height={28} className="h-7 w-7" />
             <span className="font-brand text-2xl text-primary">Mail AI</span>
