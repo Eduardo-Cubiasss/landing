@@ -184,18 +184,6 @@ function Index() {
                 Ver cómo funciona
               </a>
             </div>
-            <dl className="mt-12 grid max-w-md grid-cols-3 gap-6">
-              {[
-                ["+85%", "Margen bruto"],
-                ["48.200", "Correos despachados"],
-                ["44%", "Tasa de apertura"],
-              ].map(([k, v]) => (
-                <div key={v}>
-                  <dt className="text-2xl font-bold text-primary">{k}</dt>
-                  <dd className="text-xs text-muted-foreground">{v}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
           <div className="relative">
             <div className="animate-float surface-3d overflow-hidden rounded-[2.5rem]">
